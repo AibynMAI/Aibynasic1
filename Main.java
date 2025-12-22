@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        Event event1 = new Event(1, "Tech Conference", "2025-12-15", "Aitu");
+        Event event1 = new Event(1, "Tech Conference", "2025-12-15", "Aiu");
         Event event2 = new Event(2, "Startup Meetup", "2025-12-10", "Aitu");
 
         Participant p1 = new Participant(1, "Ali", "ali@gmail.com");
@@ -19,10 +19,6 @@ public class Main {
         event1.displayInfo();
         System.out.println();
         event2.displayInfo();
-
-
-
-
         System.out.println("\n(✯◡✯) ORGANIZER (✯◡✯)");
         organizer.displayInfo();
 
