@@ -1,22 +1,22 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Event {
-    private int id;
     private String title;
     private String date;
     private String location;
-    private ArrayList<Participant> participants;
+    private Organizer organizer;
+    private ArrayList<Participant> participants = new ArrayList<>();
 
-    public Event(int id, String title, String date, String location) {
-        this.id = id;
+    public Event(String title, String date, String location, Organizer organizer) {
         this.title = title;
         this.date = date;
         this.location = location;
-        this.participants = new ArrayList<>();
+        this.organizer = organizer;
     }
 
-    public void addParticipant(Participant participant) {
-        participants.add(participant);
+    public void addParticipant(Participant p) {
+        participants.add(p);
     }
 
     public int getParticipantCount() {
@@ -27,22 +27,28 @@ public class Event {
         return title;
     }
 
-    public String getDate() {
-        return date;
+    public String getLocation() {
+        return location;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    @Override
+    public String toString() {
+        return "Event: " + title +
+                ", Date: " + date +
+                ", Location: " + location +
+                ", Participants: " + participants.size();
     }
 
-    public void displayInfo() {
-        System.out.println("Event: " + title);
-        System.out.println("Date: " + date);
-        System.out.println("Location: " + location);
-        System.out.println("Participants count: " + participants.size());
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Event)) return false;
+        Event e = (Event) o;
+        return title.equals(e.title) && date.equals(e.date);
+    }
 
-        for (Participant p : participants) {
-            p.displayInfo();
-        }
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, date);
     }
 }

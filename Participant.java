@@ -1,27 +1,24 @@
-public class Participant {
-    private int id;
-    private String name;
-    private String email;
+public class Participant extends Person {
 
     public Participant(int id, String name, String email) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
+        super(id, name, email);
     }
 
-    public int getId() {
-        return id;
+    @Override
+    public String getRole() {
+        return "Participant";
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Participant)) return false;
+        Participant p = (Participant) o;
+        return email.equals(p.email);
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void displayInfo() {
-        System.out.println("Participant: " + name + ", Email: " + email);
+    @Override
+    public int hashCode() {
+        return email.hashCode();
     }
 }
