@@ -1,0 +1,77 @@
+# Event Scheduling System (OOP Assignment 1 & 2)
+
+## Description
+This project is a console-based Java application developed as a continuation of Assignment 1 and Assignment 2.
+The system models an Event Scheduling System, allowing the management of events, participants, and organizers.
+It demonstrates core Object-Oriented Programming (OOP) principles, including abstraction, encapsulation, inheritance, and polymorphism, as well as data management operations such as searching, filtering, and sorting.
+
+---
+
+## Technical Implementation
+The project fulfills the following assignment requirements:
+
+### 1. OOP Principles
+* Encapsulation:
+  All class fields are private or protected and accessed through public methods.
+* Abstraction:
+  The `Person` class is implemented as an abstract class to generalize common properties.
+* Inheritance:
+  `Participant` and `Organizer` classes inherit from the abstract `Person` class.
+* Polymorphism:
+  Overriding methods such as `getRole()` and `toString()` demonstrate runtime polymorphism.
+
+---
+
+### 2. Data Management
+* Data Pool:
+  Uses `ArrayList<Event>` to store and manage multiple events dynamically.
+* Searching:
+  Allows searching for events by title.
+* Filtering:
+  Enables filtering events by location.
+* Sorting:
+  Implements sorting of events based on the number of participants.
+* Console Output:
+  Displays events and system functionality through console output.
+
+---
+
+### 3. Standard Java Methods
+* Overridden `toString()` method for readable object output.
+* Overridden `equals()` and `hashCode()` methods for correct object comparison.
+
+---
+
+## Project Structure
+* `Main.java` — Entry point of the application. Demonstrates all system functionality.
+* `Person.java` — Abstract base class representing a person.
+* `Participant.java` — Entity class representing an event participant.
+* `Organizer.java` — Entity class representing an event organizer.
+* `Event.java` — Entity class representing an event and its participants.
+* `EventManager.java` — Manages the event data pool, searching, filtering, and sorting logic.
+
+---
+
+## How to Run
+1. Open the project in any Java IDE (e.g., IntelliJ IDEA).
+2. Ensure all `.java` files are located in the `src` folder.
+3. Run the `Main` class.
+4. Observe the output in the console.
+
+---
+
+## Assignment Coverage
+* Assignment 1:
+  * Classes, constructors, and object creation
+  * Encapsulation and basic OOP structure
+  * Console output and object comparison
+* Assignment 2:
+  * Abstraction, inheritance, and polymorphism
+  * Data pooling with collections
+  * Searching, filtering, and sorting
+  * Overriding standard Java methods
+
+---
+
+Student: Aibyn Mukhametsharip
+Group: SE-2504
